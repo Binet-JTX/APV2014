@@ -1,0 +1,29 @@
+%!Adobe-FontList 1.11
+%Locale:0x40c
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:X:\montage\APV2012\Architecture de la Clé\Source\Font\FuturaLight.eot
+FileModTime:1403505448
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:FuturaLight
+FamilyName:FuturaLight
+StyleName:Regular
+FullName:FuturaLight
+MenuName:FuturaLight
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:X:\montage\APV2012\Architecture de la Clé\Source\Font\FuturaLight.ttf
+DataFormat:sfntData
+FileLength:56904
+FileModTime:1402914246
+WeightClass:400
+WidthClass:5
+AngleClass:0
+%EndFont
+

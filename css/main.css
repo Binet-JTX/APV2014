@@ -1,0 +1,1953 @@
+
+body {
+    background-color:black;
+    background-repeat: repeat;
+    background-position: 0px 0px;
+    background-attachment: fixed;
+    /*background-width: 100%;*/
+    margin: 0px;
+    height:100vh;
+    max-width: 100%;
+}
+#container {
+    text-align:center;
+    height:100%;
+}
+#current-video{
+    position:absolute;
+    left:0px;
+    height:100%;
+    width:100%;
+}
+#alternat{
+    position:relative;
+    margin-left:auto;
+    margin-right:auto;
+    top:200px;
+    width:400px;
+    height:240px;
+    background-color:lightgray;
+    text-align:center;
+    border-radius:30px;
+    border-width:20px;
+    border-style:solid;
+    border-color: lightgray;
+    box-shadow: 3px 3px 0px darkgray;
+    font-family: Arial;
+}
+
+
+
+html {
+    color: #000;
+    background: #FFF;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+fieldset, img {
+    border: 0;
+}
+address, caption, cite, code, dfn, em, strong, th, var {
+    font-style: normal;
+    font-weight: normal;
+}
+li {
+    list-style: none;
+}
+caption, th {
+    text-align: left;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+q:before, q:after {
+    content: '';
+}
+abbr, acronym {
+    border: 0;
+    font-variant: normal;
+}
+sup {
+    vertical-align: text-top;
+}
+sub {
+    vertical-align: text-bottom;
+}
+input, textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+input, textarea, select {
+    *font-size: 100%;
+}
+legend {
+    color: #000;
+}
+@font-face {
+    font-family: textFont;
+    src: url(Bellerose.ttf);
+    src: url('../font/Bellerose.eot?#iefix') format('embedded-opentype'), url('../font/Bellerose.ttf') format('truetype');
+}
+
+/* Pour avoir l'effet de fade in des menus, il faut qu'au départ celui-ci soit caché. */
+.slideshow {
+    display: none;
+}
+
+img {
+    border-style: none;
+}
+
+/* Intro page */
+
+#skip-intro {
+    position:relative;
+    z-index:8;
+    top:0%;
+    left:0%;
+    float:right;
+}
+
+
+/********SuperBox definition (centre, ratio=2.2) *******/
+
+#vp {
+    background: rgba(0, 255, 0, 0);
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 45.45454545454545vw;
+    width: 100vw;
+    margin: auto 0;
+    /*overflow: hidden;*/
+    max-height: 100vh;
+}
+#vp2 {
+    background: rgba(255, 0, 0, 0);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: auto;
+    width: 100%;
+    max-width: 220vh;
+    margin: 0 auto;
+}
+#superzone {
+    background: rgba(0, 0, 255, 0);
+    position: inherit;
+    height: 100%;
+    width: 100%;
+}
+
+/***First Slide Temp***/
+
+#clicbase {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+#clicbase img {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+}
+
+/*------------Backgrounds---------*/
+
+.bkgd {
+    position: fixed;
+    width: auto;
+    height: auto;
+    min-height: 100vh;
+    min-width: 100vw;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+}
+.bkgd img {
+    position: fixed;
+    width: auto;
+    height: auto;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-image: url('Images/ADD/fond.jpg') cover center;
+}
+
+/********************BOUTONS**********************/
+
+.buttonsmenu {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.buttonsmenu li {
+    display: block;
+}
+
+/***********HOVER***************/
+
+.buttonsmenu li > a img {
+    /*accueil*/
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 40;
+}
+.buttonsmenu li > a div {
+    /* accueil select*/
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    opacity: 0;
+    /* l'opacite que vous voulez au depart */
+    -webkit-transition: opacity 0.25s ease-in-out;
+    /* transition pour Chrome et Safari */
+    -moz-transition: opacity 0.25s ease-in-out;
+    /* transition pour Firefox */
+    -o-transition: opacity 0.25s ease-in-out;
+    /* transition pour Opéra */
+    transition: opacity 0.25s ease-in-out;
+    /* on écrit cette ligne à la fin de façon à ce que ce soit elle qui soit prise en compte lorsque l'attribut transition sera pris en compte par tous les navigateurs */
+    z-index: 41;
+    background-color: rgba(0, 0, 0, .01);
+    /*transform: translate3d(0px,0px,0px);*/
+}
+.buttonsmenu li:hover > a div {
+    /*accueil hover*/
+    opacity: 1;
+}
+
+/*------------------Next-------------*/
+
+.buttonsmenu li:nth-child(1) {
+    position: absolute;
+    right: 6.5%;
+    height: 1%;
+    width: 3.5%;
+    margin: 21.66% auto;
+    padding-bottom: 3%;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 10000;
+}
+
+/*------------------Prev-------------*/
+
+.buttonsmenu li:nth-child(2) {
+    position: absolute;
+    left: 6.5%;
+    height: 1%;
+    width: 3.5%;
+    margin: 21.66% auto;
+    padding-bottom: 3%;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 10000;
+}
+
+/*------------------Intro-------------*/
+
+.buttonsmenu li:nth-child(9) {
+    position: absolute;
+    left: 90%;
+    height: 0;
+    width: 6.25%;
+    margin-top: 50%;
+    padding-bottom: 6.25%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.01);
+    z-index: 10000;
+}
+
+/*------------------Titre-------------*/
+
+.buttonsmenu li:nth-child(10) > a img {
+    position: absolute;
+    left: 25%;
+    height: auto;
+    width: 50%;
+    margin-top: -0.1%
+}
+
+/*------------------Accueil-------------*/
+
+
+/* Dans un monde parfait cela pourrait etre une solution pour les webkits:  -webkit-mask-image: -webkit-radial-gradient( circle, black 50%, transparent 50%);*/
+
+.buttonsmenu li:nth-child(11) {
+    /*round button accueil*/
+    position: absolute;
+    left: 2%;
+    height: 0;
+    width: 14%;
+    margin-top: 41.7%;
+    padding-bottom: 3%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.01);
+}
+
+/*------------------Proj-------------*/
+
+.buttonsmenu li:nth-child(12) {
+    position: absolute;
+    left: 47.3%;
+    height: auto;
+    width: 6%;
+    margin-top: 41.5%;
+    padding-bottom: 3%;
+}
+
+/*------------------Equipe-------------*/
+
+.buttonsmenu li:nth-child(13) {
+    /*equipe*/
+    position: absolute;
+    left: 92%;
+    height: 0;
+    width: 5%;
+    margin-top: 42%;
+    padding-bottom: 3%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.01);
+    z-index: 100000;
+}
+
+/*------------------Menu-------------*/
+
+.buttonsmenu li:nth-child(14) {
+    /*menu*/
+    position: absolute;
+    left: 90%;
+    height: 0;
+    width: 6%;
+    margin-top: 39.25%;
+    padding-bottom: 6%;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.01);
+}
+
+/*------------------Team central bouton (15-16)-------------*/
+
+.teamcenter {
+    /*round button team*/
+    position: absolute;
+    left: 20%;
+    height: auto;
+    width: 11%;
+    margin-top: 22%;
+    padding-bottom: 11%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.01);
+}
+
+/*--*/
+
+#teamimage.teamcenter a img {
+    cursor: default;
+}
+#teamreturn.teamcenter:hover > a div {
+    /*accueil team*/
+    opacity: 1;
+}
+#teamreturn.teamcenter {
+    display: none;
+}
+
+/*-------------------------Hidden buttons--------------*/
+
+.buttonsmenu li:nth-child(20) > a img {
+    position: absolute;
+    left: 23.05%;
+    height: auto;
+    width: 4.5%;
+    margin-top: 0.6%;
+    z-index: 42;
+}
+.buttonsmenu li:nth-child(21) {
+    position: absolute;
+    left: 24.8%;
+    height: auto;
+    width: 1%;
+    margin-top: 2.2%;
+    padding-bottom: 3%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    overflow: hidden;
+    /*background-color: rgba(255,0,0,1);*/
+    z-index: 42;
+}
+.buttonsmenu li:nth-child(22) {
+    position: absolute;
+    left: 50%;
+    height: auto;
+    width: 1.5%;
+    margin-top: 2%;
+    padding-bottom: 3.5%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    overflow: hidden;
+    /*background-color: rgba(0,0,255,1);*/
+    z-index: 42;
+}
+
+/*------------------Team overlay-------------*/
+
+
+/*definition couleur gradient*/
+.lb-overlay {
+    width: 0px;
+    height: 0px;
+    position: fixed;
+    overflow: hidden;
+    left: 0px;
+    top: 0px;
+    padding: 1;
+    z-index: 1000;
+    text-align: center;
+    background: rgba(255, 233, 41, 0.56);
+    background: -moz-radial-gradient(center, ellipse cover, rgba(255, 233, 41, 0.56) 0%, rgba(0, 0, 0, 1) 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255, 233, 41, 0.56)), color-stop(100%, rgba(0, 0, 0, 1)));
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(255, 233, 41, 0.56) 0%, rgba(0, 0, 0, 1) 100%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(255, 233, 41, 0.56) 0%, rgba(0, 0, 0, 1) 100%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(255, 233, 41, 0.56) 0%, rgba(0, 0, 0, 1) 100%);
+    background: radial-gradient(center, ellipse cover, rgba(255, 233, 41, 0.56) 0%, rgba(0, 0, 0, 1) 100%);
+}
+.lb-overlay a:nth-child(2) {
+    width: 0px;
+    height: 0px;
+    position: fixed;
+    overflow: hidden;
+    left: 0px;
+    top: 0px;
+    cursor: default;
+}
+.lb-overlay a img {
+    position: absolute;
+    width: 90vw;
+    height: auto;
+    max-width: 120vh;
+    max-height: 90vh;
+    margin: auto auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.5s linear;
+    cursor: default;
+    z-index: 2001;
+    background: url(Images/ADD/loading.gif) center center no-repeat;
+    ;
+}
+.lb-overlay:target {
+    width: auto;
+    height: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 1;
+}
+.lb-overlay:target img {
+    opacity: 1;
+}
+.lb-overlay:target a:nth-child(2) {
+    opacity: 1;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+
+}
+
+/*---------------------------fin boutons----------------------------*/
+
+
+/*--------fond menu------*/
+
+.imgzone {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.imgzone img {
+    position: absolute;
+    top: -3%;
+    left: 4.427083333%;
+    height: 103%;
+    width: 91.14583333%;
+}
+
+/*-------parametres slideshows----------------*/
+
+.slideshowmenu {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.slidemenu {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;
+    text-align: center;
+}
+.slideshowteam {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.slideteam {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;
+    text-align: center;
+}
+
+/*-----------------------parametres miniatures-----------*/
+
+.lb-album {
+    position: relative;
+    margin: 7% 12%;
+    height: 50%;
+    width: auto;
+    background: rgba(0, 255, 0, 0);
+    text-align: center;
+    list-style-type: none;
+    padding: 2%;
+
+}
+.lb-album li {
+    float: left;
+    margin: 3.5% 2.95% !important;
+    height: 35% !important;
+    width: 19% !important;
+    display: relative;
+
+}
+.lb-album li > a, .lb-album li > a img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    -moz-border-radius: 0.4vw;
+    -webkit-border-radius: 0.4vw;
+    border-radius: 0.4vw 0.4vw 0.4vw 0.4vw;
+
+}
+.lb-album li > a {
+    font-style: normal;
+    text-decoration: none;
+    text-align: center;
+    -moz-border-radius: 0.4vw;
+    -webkit-border-radius: 0.4vw;
+    border-radius: 0.4vw 0.4vw 0.4vw 0.4vw;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.lb-album li > a div {
+    overflow: visible;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    text-align: center;
+    line-height: 50%;
+    font-size: 10px;
+    opacity: 0;
+    -moz-border-radius: 0.4vw;
+    -webkit-border-radius: 0.4vw;
+    border-radius: 0.4vw 0.4vw 0.4vw 0.4vw;
+    filter: alpha(opacity=0);
+    background: -moz-radial-gradient(center, ellipse cover, rgba(251, 190,  158, 0.5) 0%, rgba(22, 37, 61, 0.5) 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(251, 190,  158, 0.5) 0%, rgba(22, 37, 61, 0.5) 100%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(251, 190,  158, 0.5) 0%, rgba(22, 37, 61, 0.5) 100%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(251, 190,  158, 0.5) 0%, rgba(22, 37, 61, 0.5) 100%);
+    background: radial-gradient(center, ellipse cover, rgba(251, 190,  158, 0.5) 0%, rgba(22, 37, 61, 0.5) 100%);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.lb-album li > a:hover div {
+    opacity: 1;
+}
+.lb-album li > a span {
+    display: block;
+    font-family: textFont;
+    font-size: 1.5vw;
+    text-align: center;
+    line-height: 100%;
+    color: #fbbe9e;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.lb-album li > a:hover span {
+    color: #dcf1f9;
+}
+
+/*------------------Texte Equipe------------------*/
+
+
+
+/************* PAGE 0 **************/
+
+#page0 li a span, #page0 li span {
+    display: inline-block
+}
+#page0 li:nth-child(1) a span {
+    left: 18%;
+    margin-top: 28%;
+}
+#page0 li:nth-child(2) a span {
+    left: 18%;
+    margin-top: 8%;
+}
+#page0 li:nth-child(3) a span {
+    left: 75%;
+    margin-top: 21.5%;
+}
+#page0 li:nth-child(4) a span {
+    left: 65%;
+    margin-top: 28%;
+}
+#page0 li:nth-child(5) a span {
+    left: 58%;
+    margin-top: 8%;
+    line-height: 100%;
+}
+#page0 li:nth-child(6) a span {
+    left: 10%;
+    margin-top: 14%;
+}
+#page0 li:nth-child(7) a span {
+    left: 13%;
+    margin-top: 21%;
+}
+#page0 li:nth-child(8) span {
+    left: 31%;
+    width: 10%;
+    margin-top: 18%;
+}
+#page0 li:nth-child(9) span {
+    right: 29%;
+    width: 12%;
+    margin-top: 18%;
+}
+#page0 li:nth-child(10) span {
+    left: 40.2%;
+    margin-top: 27.5%;
+}
+#page0 li:nth-child(11) span {
+    left: 40.2%;
+    margin-top: 31.5%;
+}
+#page0 li:nth-child(12) span {
+    left: 38%;
+    margin-top: 9.5%;
+}
+
+/************* PAGE 1 **************/
+
+#page1 li a span, #page1 li span {
+    display: block
+}
+#page1 li:nth-child(1) span {
+    left: 28%;
+    margin-top: 9%;
+}
+#page1 li:nth-child(2) span {
+    left: 20%;
+    margin-top: 23.5%;
+}
+#page1 li:nth-child(3) span {
+    left: 25%;
+    margin-top: 30%;
+}
+#page1 li:nth-child(4) span {
+    left: 11%;
+    margin-top: 17%;
+}
+#page1 li:nth-child(5) span {
+    right: 21.5%;
+    margin-top: 23.5%;
+}
+#page1 li:nth-child(6) span {
+    right: 23.3%;
+    margin-top: 30%;
+}
+#page1 li:nth-child(7) span {
+    right: 16%;
+    margin-top: 17%;
+}
+
+/************* PAGE 2 **************/
+
+#page2 li a span, #page2 li span {
+    display: block
+}
+#page2 li:nth-child(1) span {
+    left: 34.5%;
+    margin-top: 9%;
+}
+#page2 li:nth-child(2) span {
+    left: 16%;
+    margin-top: 17%;
+}
+#page2 li:nth-child(3) span {
+    left: 18%;
+    margin-top: 23.5%;
+}
+#page2 li:nth-child(4) span {
+    left: 22.5%;
+    margin-top: 30%;
+}
+#page2 li:nth-child(5) span {
+    right: 21.5%;
+    margin-top: 30%;
+}
+#page2 li:nth-child(6) span {
+    right: 13%;
+    margin-top: 17%;
+}
+#page2 li:nth-child(7) span {
+    right: 17.65%;
+    margin-top: 23.5%;
+}
+
+/************* PAGE 3 **************/
+
+#page3 li a span, #page3 li span {
+    display: block
+}
+#page3 li:nth-child(1) span {
+    left: 31.3%;
+    margin-top: 9%;
+}
+#page3 li:nth-child(2) span {
+    left: 39%;
+    margin-top: 29%;
+}
+#page3 li:nth-child(3) span {
+    left: 11.5%;
+    margin-top: 13%;
+}
+#page3 li:nth-child(4) span {
+    left: 22%;
+    margin-top: 17%;
+}
+#page3 li:nth-child(5) span {
+    left: 16.5%;
+    margin-top: 21%;
+}
+#page3 li:nth-child(6) span {
+    left: 23%;
+    margin-top: 25%;
+}
+#page3 li:nth-child(7) span {
+    left: 13.5%;
+    margin-top: 29%;
+}
+#page3 li:nth-child(8) span {
+    right: 15%;
+    margin-top: 15%;
+}
+#page3 li:nth-child(9) span {
+    right: 17%;
+    margin-top: 19.5%;
+}
+#page3 li:nth-child(10) span {
+    right: 14%;
+    margin-top: 24%;
+}
+#page3 li:nth-child(11) span {
+    right: 19%;
+    margin-top: 28.5%;
+}
+
+/************* PAGE 4 **************/
+
+
+/*Technique*/
+
+#page4 li a span, #page4 li span {
+    display: block
+}
+#page4 li:nth-child(1) span {
+    left: 28.8%;
+    margin-top: 9%;
+}
+#page4 li:nth-child(2) span {
+    font-size: 3.5vw !important;
+    left: 41%;
+    margin-top: 29%;
+}
+#page4 li:nth-child(3) span {
+    left: 9.5%;
+    margin-top: 11%;
+}
+#page4 li:nth-child(4) span {
+    left: 27%;
+    margin-top: 20%;
+}
+#page4 li:nth-child(5) span {
+    right: 11%;
+    margin-top: 10%;
+}
+#page4 li:nth-child(6) span {
+    right: 27.8%;
+    margin-top: 20%;
+}
+#page4 li:nth-child(7) span {
+    left: 9%;
+    margin-top: 15.8%;
+}
+#page4 li:nth-child(8) span {
+    left: 26.7%;
+    margin-top: 24.8%;
+}
+#page4 li:nth-child(9) span {
+    right: 26.7%;
+    margin-top: 24.8%;
+}
+#page4 li:nth-child(10) span {
+    right: 9%;
+    margin-top: 14.8%;
+}
+
+/************* PAGE 5 **************/
+
+#page5 li a span, #page5 li span {
+    display: block
+}
+#page5 li:nth-child(1) span {
+    left: 26.9%;
+    margin-top: 6%;
+}
+#page5 li:nth-child(2) span {
+    left: 12.5%;
+    margin-top: 14.4%;
+}
+#page5 li:nth-child(3) span {
+    left: 19%;
+    margin-top: 25.6%;
+}
+#page5 li:nth-child(4) span {
+    right: 19.5%;
+    margin-top: 15%;
+}
+#page5 li:nth-child(5) span {
+    left: 13%;
+    margin-top: 18.2%;
+    line-height: 100%;
+}
+#page5 li:nth-child(6) span {
+    left: 11.5%;
+    margin-top: 29.4%;
+    text-align: right;
+    line-height: 100%;
+}
+#page5 li:nth-child(7) span {
+    left: 26%;
+    margin-top: 29.4%;
+    text-align: left;
+    line-height: 100%;
+}
+#page5 li:nth-child(8) span {
+    right: 13.5%;
+    margin-top: 19.25%;
+    text-align: left;
+}
+#page5 li:nth-child(9) span {
+    right: 26%;
+    margin-top: 19.25%;
+    text-align: right;
+}
+#page5 li:nth-child(10) span {
+    right: 17.5%;
+    margin-top: 32%;
+}
+
+/************* PAGE 6 **************/
+
+#page6 li span {
+    display: block;
+}
+#page6 li a span {
+    display: block;
+    font-size: 3.75vw !important;
+}
+#page6 li:nth-child(1) span {
+    left: 34%;
+    margin-top: 9%;
+}
+#page6 li:nth-child(2) span {
+    font-size: 3.25vw !important;
+    left: 41.55%;
+    margin-top: 29%;
+}
+#page6 li:nth-child(3) a span {
+    left: 9.25%;
+    margin-top: 9.9%;
+    text-align: left;
+    line-height: 125%;
+}
+#page6 li:nth-child(4) a span {
+    right: 9%;
+    margin-top: 29.75%;
+}
+#page6 li:nth-child(5) a span {
+    left: 10%;
+    margin-top: 20.10%;
+}
+#page6 li:nth-child(6) a span {
+    right: 8.3%;
+    margin-top: 9.9%;
+    line-height: 125%;
+    text-align: right;
+}
+#page6 li:nth-child(7) a span {
+    left: 15.5%;
+    margin-top: 25.25%;
+    text-align: right;
+    line-height: 125%;
+}
+#page6 li:nth-child(8) a span {
+    left: 9%;
+    margin-top: 25.25%;
+}
+#page6 li:nth-child(9) a span {
+    right: 11.5%;
+    margin-top: 19.85%;
+    line-height: 125%;
+}
+#page6 li:nth-child(10) a span {
+    right: 27%;
+    margin-top: 29.75%;
+}
+
+/************* PAGE 7 **************/
+
+#page7 li span {
+    display: block;
+}
+#page7 li a span {
+    display: block;
+    font-size: 3.75vw !important;
+}
+#page7 li:nth-child(1) span {
+    left: 31%;
+    margin-top: 9%;
+}
+#page7 li:nth-child(2) span {
+    font-size: 3.5vw !important;
+    left: 32%;
+    margin-top: 29%;
+}
+#page7 li:nth-child(3) a span {
+    left: 10%;
+    margin-top: 9.8%;
+    text-align: left;
+    line-height: 110%;
+}
+#page7 li:nth-child(4) a span {
+    right: 9.1%;
+    margin-top: 9.8%;
+    line-height: 125%;
+    text-align: right;
+}
+#page7 li:nth-child(5) a span {
+    right: 14%;
+    margin-top: 19.55%;
+    line-height: 125%;
+    text-align: left;
+}
+#page7 li:nth-child(6) a span {
+    right: 3.75%;
+    margin-top: 24.15%;
+    line-height: 125%;
+}
+#page7 li:nth-child(7) a span {
+    left: 12.5%;
+    margin-top: 14.75%;
+    line-height: 132%;
+    text-align: left;
+}
+#page7 li:nth-child(8) a span {
+    left: 9%;
+    margin-top: 25%;
+}
+
+/************* PAGE 8 **************/
+
+#page8 li a span, #page8 li span {
+    display: block
+}
+#page8 li:nth-child(1) a span {
+    font-size: 5vw !important;
+    left: 14%;
+    margin-top: 9%;
+}
+#page8 li:nth-child(2) a span {
+    font-size: 4.5vw !important;
+    right: 10.8%;
+    margin-top: 8%;
+}
+#page8 li:nth-child(3) span {
+    font-size: 3vw !important;
+    left: 19%;
+    margin-top: 15.5%;
+}
+#page8 li:nth-child(4) span {
+    font-size: 3vw !important;
+    right: 20%;
+    margin-top: 13.8%;
+}
+#page8 li:nth-child(5) span {
+    font-size: 3.5vw !important;
+    right: 15%;
+    margin-top: 17.75%;
+}
+#page8 li:nth-child(6) span {
+    font-size: 3vw !important;
+    right: 19%;
+    margin-top: 22%;
+}
+#page8 li:nth-child(7) img {
+    position: absolute;
+    left: 19.75%;
+    margin-top: 24%;
+    width: 15%;
+    height: auto;
+    border: solid 0.15vw rgba(0, 0, 150, .3);
+    -webkit-border-radius: 5% 0 5% 0;
+    -moz-border-radius: 5% 0 5% 0;
+    border-radius: 5% 0 5% 0;
+}
+#page8 li:nth-child(8) img {
+    position: absolute;
+    right: 19.75%;
+    margin-top: 28%;
+    width: 15%;
+    height: auto;
+    border: solid 0.15vw rgba(0, 0, 150, .3);
+    -webkit-border-radius: 0 5% 0 5%;
+    -moz-border-radius: 0 5% 0 5%;
+    border-radius: 0 5% 0 5%;
+}
+
+/************* PAGE 9 **************/
+
+#page9 li a span, #page9 li span {
+    display: block
+}
+#page9 li:nth-child(1) a span {
+    font-size: 6.5vw !important;
+    left: 36.1%;
+    margin-top: 7.5%;
+}
+#page9 li:nth-child(2) span {
+    font-size: 3.5vw !important;
+    left: 41.2%;
+    margin-top: 29%;
+}
+#page9 li:nth-child(3) span {
+    left: 18%;
+    margin-top: 12%;
+}
+#page9 li:nth-child(4) span {
+    right: 18%;
+    margin-top: 12%;
+}
+#page9 li:nth-child(5) span {
+    left: 15%;
+    margin-top: 17%;
+    line-height: 120%;
+}
+#page9 li:nth-child(6) span {
+    right: 17%;
+    margin-top: 17%;
+    line-height: 120%;
+}
+#page9 li:nth-child(7) img {
+    position: absolute;
+    right: 16%;
+    margin-top: 26%;
+    width: 15%;
+    height: auto;
+    border: solid 0.15vw rgba(0, 0, 150, .3);
+    -webkit-border-radius: 0 5% 0 5%;
+    -moz-border-radius: 0 5% 0 5%;
+    border-radius: 0 5% 0 5%;
+}
+
+/************* PAGE 10 **************/
+
+#page10 li a span, #page10 li span {
+    display: block
+}
+#page10 li:nth-child(1) a span {
+    font-size: 5vw !important;
+    left: 33.7%;
+    margin-top: 8%;
+}
+#page10 li:nth-child(2) span {
+    font-size: 3vw !important;
+    left: 40.3%;
+    margin-top: 27.5%;
+    line-height: 110%;
+}
+#page10 li:nth-child(3) span {
+    right: 17.25%;
+    margin-top: 8%;
+}
+#page10 li:nth-child(4) span {
+    left: 16.5%;
+    margin-top: 8%;
+}
+#page10 li:nth-child(5) span {
+    right: 19.5%;
+    margin-top: 19.5%;
+}
+#page10 li:nth-child(6) span {
+    right: 18%;
+    margin-top: 12.7%;
+    line-height: 125%;
+}
+#page10 li:nth-child(7) span {
+    left: 10.8%;
+    margin-top: 12.7%;
+    line-height: 120%;
+    text-align: right;
+    font-style: oblique;
+}
+#page10 li:nth-child(8) span {
+    right: 27%;
+    margin-top: 24.2%;
+    line-height: 120%;
+    text-align: right;
+    font-style: oblique;
+}
+#page10 li:nth-child(9) span {
+    left: 19.5%;
+    margin-top: 12.7%;
+    line-height: 120%;
+    text-align: left;
+}
+#page10 li:nth-child(10) span {
+    right: 12%;
+    margin-top: 24.2%;
+    line-height: 120%;
+    text-align: left;
+}
+
+/************* PAGE 11 **************/
+
+#page11 li a span, #page11 li span {
+    display: block
+}
+#page11 li:nth-child(1) a span {
+    font-size: 5vw !important;
+    left: 35.5%;
+    margin-top: 26.3%;
+}
+#page11 li:nth-child(2) a span {
+    font-size: 5vw !important;
+    left: 12.5%;
+    margin-top: 7%;
+}
+#page11 li:nth-child(3) a span {
+    font-size: 5vw !important;
+    right: 16.5%;
+    margin-top: 7%;
+}
+#page11 li:nth-child(4) span {
+    font-size: 3vw !important;
+    left: 23%;
+    margin-top: 32.5%;
+}
+#page11 li:nth-child(5) span {
+    left: 17.5%;
+    margin-top: 20%;
+}
+#page11 li:nth-child(6) span {
+    right: 27%;
+    margin-top: 13%;
+    line-height: 120%;
+}
+#page11 li:nth-child(7) span {
+    right: 11%;
+    margin-top: 13%;
+    line-height: 120%;
+}
+#page11 li:nth-child(8) span {
+    right: 19.5%;
+    margin-top: 18.2%;
+}
+#page11 li:nth-child(9) span {
+    right: 21.75%;
+    margin-top: 21.5%;
+}
+#page11 li:nth-child(10) span {
+    left: 15%;
+    margin-top: 14%;
+}
+#page11 li:nth-child(11) span {
+    font-size: 3vw !important;
+    left: 24%;
+    margin-top: 15%;
+}
+#page11 li:nth-child(12) img {
+    position: absolute;
+    left: 29%;
+    margin-top: 15.25%;
+    width: 3.75%;
+    height: auto;
+}
+#page11 li:nth-child(13) span {
+    left: 9%;
+    margin-top: 24%;
+    line-height: 120%;
+    text-align: right;
+    font-style: oblique;
+}
+#page11 li:nth-child(14) span {
+    left: 19%;
+    margin-top: 24%;
+    line-height: 120%;
+    text-align: left;
+}
+#page11 li:nth-child(15) span {
+    right: 20%;
+    margin-top: 25%;
+}
+
+/************* PAGE 12 **************/
+
+#page12 li a span, #page12 li span {
+    display: block
+}
+#page12 li:nth-child(1) a span {
+    font-size: 5vw !important;
+    left: 39.75%;
+    margin-top: 8%;
+}
+#page12 li:nth-child(2) span {
+    font-size: 3.5vw !important;
+    left: 40.55%;
+    margin-top: 28.5%;
+    line-height: 110%;
+}
+#page12 li:nth-child(3) span {
+    right: 20.25%;
+    margin-top: 9%;
+}
+#page12 li:nth-child(4) span {
+    left: 19%;
+    margin-top: 9%;
+}
+#page12 li:nth-child(5) span {
+    right: 19%;
+    margin-top: 13.7%;
+    line-height: 125%;
+}
+#page12 li:nth-child(6) span {
+    left: 12.8%;
+    margin-top: 13.7%;
+    line-height: 120%;
+    text-align: right;
+    font-style: oblique;
+}
+#page12 li:nth-child(7) span {
+    left: 21.5%;
+    margin-top: 13.7%;
+    line-height: 120%;
+    text-align: left;
+}
+#page12 li:nth-child(8) img {
+    position: absolute;
+    right: 19.3%;
+    margin-top: 24.75%;
+    width: 15%;
+    height: auto;
+    border: solid 0.15vw rgba(0, 0, 150, .3);
+    -webkit-border-radius: 0 5% 0 5%;
+    -moz-border-radius: 0 5% 0 5%;
+    border-radius: 0 5% 0 5%;
+}
+
+/************* PAGE 13 **************/
+
+#page13 li a span, #page13 li span {
+    display: block
+}
+#page13 li:nth-child(1) a span {
+    font-size: 5vw !important;
+    left: 20.25%;
+    margin-top: 8%;
+}
+#page13 li:nth-child(2) a span {
+    font-size: 5vw !important;
+    right: 12.75%;
+    margin-top: 8%;
+}
+#page13 li:nth-child(3) span {
+    left: 12%;
+    margin-top: 14.2%;
+    line-height: 110%;
+    font-size: 3vw !important;
+}
+#page13 li:nth-child(4) span {
+    left: 19%;
+    margin-top: 25%;
+}
+#page13 li:nth-child(5) span {
+    left: 20.5%;
+    margin-top: 18%;
+}
+#page13 li:nth-child(6) span {
+    right: 17.2%;
+    margin-top: 15.2%;
+    font-size: 3vw !important;
+}
+#page13 li:nth-child(7) span {
+    left: 8.5%;
+    margin-top: 29%;
+    line-height: 110%;
+}
+#page13 li:nth-child(8) span {
+    left: 15%;
+    margin-top: 21.7%;
+    line-height: 110%;
+}
+#page13 li:nth-child(9) span {
+    right: 25%;
+    margin-top: 19.2%;
+    font-size: 3vw !important;
+}
+#page13 li:nth-child(10) img {
+    position: absolute;
+    right: 24%;
+    margin-top: 25.5%;
+    width: 6%;
+    height: auto;
+}
+
+/************* PAGE 14 **************/
+
+#page14 li a span, #page14 li span {
+    display: block
+}
+#page14 li:nth-child(1) a span {
+    font-size: 5vw !important;
+    left: 41.25%;
+    margin-top: 26.3%;
+}
+#page14 li:nth-child(2) a span {
+    font-size: 5vw !important;
+    left: 14.25%;
+    margin-top: 8%;
+}
+#page14 li:nth-child(3) a span {
+    font-size: 5vw !important;
+    right: 17.75%;
+    margin-top: 8%;
+}
+#page14 li:nth-child(4) span {
+    font-size: 3vw !important;
+    left: 31%;
+    margin-top: 32.5%;
+}
+#page14 li:nth-child(5) span {
+    left: 15.75%;
+    margin-top: 15.2%;
+    line-height: 110%;
+    font-size: 3vw !important;
+}
+#page14 li:nth-child(6) span {
+    right: 17.2%;
+    margin-top: 15.2%;
+    font-size: 3vw !important;
+}
+#page14 li:nth-child(7) img {
+    position: absolute;
+    right: 20.5%;
+    margin-top: 21%;
+    width: 10%;
+    height: auto;
+}
+
+/************* PAGE 15 **************/
+
+#page15 li a span, #page15 li span {
+    display: block
+}
+#page15 li:nth-child(1) a span {
+    font-size: 6vw !important;
+    left: 39.2%;
+    margin-top: 7.2%;
+}
+#page15 li:nth-child(2) span {
+    font-size: 3.5vw !important;
+    left: 40.9%;
+    margin-top: 28.5%;
+}
+#page15 li:nth-child(3) span {
+    left: 19.5%;
+    margin-top: 8%;
+}
+#page15 li:nth-child(4) span {
+    left: 13%;
+    margin-top: 20%;
+}
+#page15 li:nth-child(5) span {
+    right: 18.5%;
+    margin-top: 19.2%;
+}
+#page15 li:nth-child(6) span {
+    right: 20%;
+    margin-top: 8%;
+}
+#page15 li:nth-child(7) span {
+    right: 15.5%;
+    margin-top: 28%;
+}
+#page15 li:nth-child(8) span {
+    left: 9.8%;
+    margin-top: 12.7%;
+    line-height: 120%;
+    text-align: right;
+}
+#page15 li:nth-child(9) span {
+    left: 25.5%;
+    margin-top: 12.7%;
+    line-height: 120%;
+    text-align: left;
+}
+#page15 li:nth-child(10) span {
+    left: 10.5%;
+    margin-top: 24.7%;
+    line-height: 120%;
+    text-align: right;
+}
+#page15 li:nth-child(11) span {
+    left: 25.5%;
+    margin-top: 24.7%;
+    line-height: 120%;
+    text-align: left;
+}
+#page15 li:nth-child(12) span {
+    right: 13.5%;
+    margin-top: 23.9%;
+    line-height: 120%;
+}
+#page15 li:nth-child(13) span {
+    right: 26%;
+    margin-top: 12.7%;
+    line-height: 120%;
+    text-align: right;
+}
+#page15 li:nth-child(14) span {
+    right: 12%;
+    margin-top: 12.7%;
+    line-height: 120%;
+    text-align: left;
+}
+#page15 li:nth-child(15) span {
+    right: 19%;
+    margin-top: 32.5%;
+}
+
+/************* PAGE 16 **************/
+
+#page16 li a span, #page16 li span {
+    display: block
+}
+#page16 li:nth-child(1) a span {
+    font-size: 5vw !important;
+    left: 35.7%;
+    margin-top: 8%;
+}
+#page16 li:nth-child(2) span {
+    font-size: 3.5vw !important;
+    left: 41%;
+    margin-top: 27.5%;
+    line-height: 110%;
+}
+#page16 li:nth-child(3) span {
+    right: 17.95%;
+    margin-top: 11%;
+}
+#page16 li:nth-child(4) span {
+    left: 17.5%;
+    margin-top: 11%;
+}
+#page16 li:nth-child(5) span {
+    left: 15%;
+    margin-top: 16.2%;
+    line-height: 120%;
+}
+#page16 li:nth-child(6) span {
+    right: 15%;
+    margin-top: 16.2%;
+    line-height: 120%;
+}
+
+/************* PAGE 17 **************/
+
+#page17 li a span, #page17 li span {
+    display: block
+}
+#page17 li:nth-child(1) a span {
+    font-size: 5vw !important;
+    left: 16%;
+    margin-top: 8%;
+}
+#page17 li:nth-child(2) a span {
+    font-size: 5vw !important;
+    right: 12%;
+    line-height: 100%;
+    margin-top: 7%;
+}
+#page17 li:nth-child(3) span {
+    left: 18%;
+    margin-top: 14.2%;
+    line-height: 110%;
+    font-size: 3vw !important;
+}
+#page17 li:nth-child(4) span {
+    left: 20.5%;
+    margin-top: 21.5%;
+}
+#page17 li:nth-child(5) span {
+    right: 18.5%;
+    margin-top: 18%;
+    line-height: 110%;
+    font-size: 3vw !important;
+}
+#page17 li:nth-child(6) span {
+    right: 21.5%;
+    margin-top: 22.5%;
+}
+#page17 li:nth-child(7) span {
+    left: 13.2%;
+    margin-top: 26%;
+    line-height: 110%;
+    text-align: right;
+    font-style: oblique;
+}
+#page17 li:nth-child(8) span {
+    left: 24.8%;
+    margin-top: 26%;
+    line-height: 110%;
+    text-align: left;
+}
+#page17 li:nth-child(9) span {
+    right: 28.7%;
+    margin-top: 27%;
+    line-height: 110%;
+    text-align: right;
+    font-style: oblique;
+}
+#page17 li:nth-child(10) span {
+    right: 11%;
+    margin-top: 27%;
+    line-height: 110%;
+    text-align: left;
+}
+
+/************* PAGE 18 **************/
+
+#page18 li a span, #page18 li span {
+    display: block
+}
+#page18 li:nth-child(1) a span {
+    font-size: 5vw !important;
+    left: 13.5%;
+    margin-top: 6%;
+}
+#page18 li:nth-child(2) a span {
+    font-size: 5vw !important;
+    right: 14%;
+    margin-top: 8%;
+}
+#page18 li:nth-child(3) span {
+    left: 14%;
+    margin-top: 11.9%;
+    line-height: 110%;
+    font-size: 3vw !important;
+}
+#page18 li:nth-child(4) span {
+    left: 21.5%;
+    margin-top: 19%;
+}
+#page18 li:nth-child(5) span {
+    right: 19.5%;
+    margin-top: 15.2%;
+    line-height: 110%;
+    font-size: 3vw !important;
+}
+#page18 li:nth-child(6) span {
+    left: 10%;
+    margin-top: 23.2%;
+    line-height: 110%;
+    text-align: right;
+    font-style: oblique;
+}
+#page18 li:nth-child(7) span {
+    left: 25.8%;
+    margin-top: 23.2%;
+    line-height: 110%;
+    text-align: left;
+}
+#page18 li:nth-child(8) img {
+    position: absolute;
+    right: 19.7%;
+    margin-top: 23%;
+    width: 15%;
+    height: auto;
+    border: solid 0.15vw rgba(0, 0, 150, .3);
+    -webkit-border-radius: 0 5% 0 5%;
+    -moz-border-radius: 0 5% 0 5%;
+    border-radius: 0 5% 0 5%;
+}
+
+/************* PAGE 19 **************/
+
+#page19 li a span, #page19 li span {
+    display: block
+}
+#page19 li:nth-child(1) a span {
+    font-size: 5vw !important;
+    left: 11.2%;
+    margin-top: 7.5%;
+}
+#page19 li:nth-child(2) a span {
+    font-size: 5vw !important;
+    right: 12%;
+    margin-top: 8%;
+}
+#page19 li:nth-child(3) span {
+    left: 17%;
+    margin-top: 13.5%;
+    line-height: 110%;
+    font-size: 3vw !important;
+}
+#page19 li:nth-child(4) span {
+    left: 20.5%;
+    margin-top: 23.5%;
+}
+#page19 li:nth-child(5) span {
+    right: 18.5%;
+    margin-top: 14.7%;
+    line-height: 110%;
+    font-size: 3vw !important;
+}
+#page19 li:nth-child(6) span {
+    right: 20.5%;
+    margin-top: 20%;
+}
+#page19 li:nth-child(7) span {
+    left: 13%;
+    margin-top: 28%;
+    line-height: 110%;
+}
+#page19 li:nth-child(8) span {
+    right: 18.2%;
+    margin-top: 24.5%;
+    line-height: 110%;
+}
+
+/************* PAGE 20 **************/
+
+#page20 li a span, #page20 li span {
+    display: block
+}
+#page20 li:nth-child(1) a span {
+    font-size: 5vw !important;
+    left: 10%;
+    margin-top: 8%;
+}
+#page20 li:nth-child(2) a span {
+    font-size: 5vw !important;
+    right: 13%;
+    margin-top: 7.5%;
+}
+#page20 li:nth-child(3) span {
+    left: 19%;
+    margin-top: 14.7%;
+    line-height: 110%;
+    font-size: 3vw !important;
+}
+#page20 li:nth-child(4) span {
+    left: 22%;
+    margin-top: 19.5%;
+}
+#page20 li:nth-child(5) span {
+    right: 17%;
+    margin-top: 14.2%;
+    line-height: 110%;
+    font-size: 3vw !important;
+}
+#page20 li:nth-child(6) span {
+    right: 21%;
+    margin-top: 21.25%;
+}
+#page20 li:nth-child(7) span {
+    left: 12%;
+    margin-top: 24%;
+    line-height: 110%;
+    text-align: right;
+}
+#page20 li:nth-child(8) span {
+    left: 27%;
+    margin-top: 24%;
+    line-height: 110%;
+    text-align: left;
+}
+#page20 li:nth-child(9) span {
+    right: 26.7%;
+    margin-top: 25.5%;
+    line-height: 110%;
+    text-align: right;
+}
+#page20 li:nth-child(10) span {
+    right: 10.5%;
+    margin-top: 25.5%;
+    line-height: 110%;
+    text-align: left;
+}
+#page20 li:nth-child(11) span {
+    right: 18.5%;
+    margin-top: 33%;
+}
+
+/************* PAGE 21 **************/
+
+#page21 li a span, #page21 li span {
+    display: block
+}
+#page21 li:nth-child(1) a span {
+    font-size: 5vw !important;
+    left: 10%;
+    margin-top: 8%;
+}
+#page21 li:nth-child(2) span {
+    font-size: 5vw !important;
+    left: 11.3%;
+    margin-top: 14.5%;
+}
+#page21 li:nth-child(3) a span {
+    font-size: 5vw !important;
+    left: 16.5%;
+    margin-top: 13.5%;
+}
+#page21 li:nth-child(4) a span {
+    font-size: 5vw !important;
+    right: 12%;
+    margin-top: 8%;
+}
+#page21 li:nth-child(5) span {
+    left: 18.3%;
+    margin-top: 20.2%;
+    line-height: 110%;
+    font-size: 3vw !important;
+}
+#page21 li:nth-child(6) span {
+    left: 20.5%;
+    margin-top: 24.5%;
+}
+#page21 li:nth-child(7) span {
+    right: 18.5%;
+    margin-top: 15%;
+    line-height: 110%;
+    font-size: 3vw !important;
+}
+#page21 li:nth-child(8) span {
+    left: 10.5%;
+    margin-top: 29%;
+    line-height: 110%;
+    text-align: right;
+}
+#page21 li:nth-child(9) span {
+    left: 27%;
+    margin-top: 29%;
+    line-height: 110%;
+    text-align: left;
+}
+#page21 li:nth-child(10) img {
+    position: absolute;
+    right: 19.3%;
+    margin-top: 24.3%;
+    width: 15%;
+    height: auto;
+    border: solid 0.15vw rgba(0, 0, 150, .3);
+    -webkit-border-radius: 0 5% 0 5%;
+    -moz-border-radius: 0 5% 0 5%;
+    border-radius: 0 5% 0 5%;
+}
+
+/************* PAGE 22 **************/
+
+#page22 li a span, #page22 li span {
+    display: block
+}
+#page22 li:nth-child(1) a span {
+    font-size: 5vw !important;
+    left: 35%;
+    margin-top: 8%;
+}
+#page22 li:nth-child(2) span {
+    font-size: 4vw !important;
+    left: 13.5%;
+    margin-top: 11.5%;
+}
+#page22 li:nth-child(3) span {
+    font-size: 3.5vw !important;
+    left: 15%;
+    margin-top: 16%;
+}
+#page22 li:nth-child(4) span {
+    font-size: 3.5vw !important;
+    left: 14.3%;
+    margin-top: 20%;
+}
+#page22 li:nth-child(5) img {
+    position: absolute;
+    left: 16%;
+    margin-top: 26.5%;
+    width: 15%;
+    height: auto;
+    border: solid 0.15vw rgba(0, 0, 150, .3);
+    -webkit-border-radius: 15% 0 15% 0;
+    -moz-border-radius: 15% 0 15% 0;
+    border-radius: 15% 0 15% 0;
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    -o-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+}
+#page22 li:nth-child(5) img:hover {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+}
+#page22 li:nth-child(6) span {
+    font-size: 4vw !important;
+    right: 15%;
+    margin-top: 11%;
+}
+#page22 li:nth-child(7) span {
+    font-size: 3.5vw !important;
+    right: 11%;
+    margin-top: 16.5%;
+}
+#page22 li:nth-child(8) span {
+    font-size: 3.5vw !important;
+    right: 12%;
+    margin-top: 21%;
+}
+#page22 li:nth-child(9) span {
+    font-size: 3.5vw !important;
+    right: 9.5%;
+    margin-top: 25.5%;
+}
+#page22 li:nth-child(10) span {
+    font-size: 3.5vw !important;
+    right: 8%;
+    margin-top: 30%;
+}
+#page22 li:nth-child(11) a img {
+    position: absolute;
+    left: 37%;
+    margin-top: 25.5%;
+    width: 6%;
+    height: auto;
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    -o-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+}
+#page22 li:nth-child(11) a img:hover {
+    -webkit-transform: scale3d(5, 5, 5);
+    -moz-transform: scale3d(5, 5, 5);
+    -o-transform: scale3d(5, 5, 5);
+}
+#page22 li:nth-child(12) a span {
+    font-size: 7vw !important;
+    position: absolute;
+    left: 45.5%;
+    margin-top: 27.5%;
+    width: 6%;
+    height: auto;
+    -webkit-transition-duration: 50s;
+    -moz-transition-duration: 50s;
+    -o-transition-duration: 50s;
+    transition-duration: 50s;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+}
+#page22 li:nth-child(12) a span:hover {
+    -webkit-transform: rotate(157500deg);
+    -moz-transform: rotate(157500deg);
+    -o-transform: rotate(157500deg);
+}
+Contact GitHub API Training Shop Blog About
+© 2017 GitHub, Inc. Terms Privacy Security Status Help
