@@ -38,6 +38,11 @@ var display = {
                 "title": "Sections et binets",
                 "id": "sectionsbinets"
             }, {
+                "type": "projection",
+                "poster": "06-AmphiDeDepart.png",
+                "title": "Amphi de départ",
+                "id": "amphidedepart"
+            }, {
                 "type": "menu",
                 "poster": "07-Bonus.png",
                 "title": "Bonus",
@@ -152,6 +157,11 @@ var display = {
                 "poster": "tsged2016.png",
                 "title": "TSGED 2016",
                 "id": "tsged2016"
+            }, {
+                "type": "projection",
+                "poster": "tsged2017.png",
+                "title": "TSGED 2017",
+                "id": "tsged2017"
             }, {
                 "type": "projection",
                 "poster": "binets2015.png",
@@ -476,6 +486,12 @@ var display = {
             "prev": "promo",
             "background": "background.png"
         },
+        "tsged2017": {
+            "pathPrefix": "../../images/projections/tsged2017/",
+            "titre": "titre.png",
+            "prev": "promo",
+            "background": "background.png"
+        },
         "conferences": {
             "pathPrefix": "../../images/projections/conferences/",
             "titre": "titre.png",
@@ -524,6 +540,12 @@ var display = {
             "prev": "main",
             "background": "libPosterifier.png"
         },
+        "garsdeleclerc": {
+            "pathPrefix": "../../js/utils/src/",
+            "titre": "srcTitle.png",
+            "prev": "main",
+            "background": "srcPosterifier.png"
+        },
         "sectionsbinets": {
             "pathPrefix": "../../images/projections/sectionsbinets/",
             "titre": "titre.png",
@@ -550,6 +572,12 @@ var display = {
         },
         "interviews": {
             "pathPrefix": "../../images/projections/interviews/",
+            "titre": "titre.png",
+            "prev": "main",
+            "background": "background.png"
+        },
+        "amphidedepart": {
+            "pathPrefix": "../../images/projections/add2014/",
             "titre": "titre.png",
             "prev": "main",
             "background": "background.png"

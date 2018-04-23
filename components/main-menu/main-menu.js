@@ -176,6 +176,7 @@ if ( window.addEventListener ) {
 		var konami1 = "66,65,73,76,83";
 		var konami2 = "66,65,85,88";
 		var konami3 = "67,69,83,84,74,69,78,78,65,78,84";
+		var konami4 = "71,65,82,83,68,69,76,69,67,76,69,82,67";
         window.addEventListener("keydown", function(e){
                 kkeys.push( e.keyCode );
                 if ( kkeys.toString().indexOf( konami1 ) >= 0 ) {
@@ -186,6 +187,9 @@ if ( window.addEventListener ) {
                 }
                 if ( kkeys.toString().indexOf( konami3 ) >= 0 ) {
                     window.location = "../projection/projection.html?id=cestjennant"
+                }
+                if ( kkeys.toString().indexOf( konami4 ) >= 0 ) {
+                    window.location = "../projection/projection.html?id=garsdeleclerc"
                 }
         }, true);
 }

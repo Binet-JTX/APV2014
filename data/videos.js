@@ -574,7 +574,7 @@ var videos = {
 			{
 				 "poster": "000a_IntroProjhibition.png",
 				 "src": "000a_IntroProjhibition.mp4",
-				 "title": "PIntro"
+				 "title": "Intro"
 			 },
 			{
 				 "poster": "001a_Les_princesses_de_l_amour_1.png",
@@ -2760,6 +2760,30 @@ var videos = {
 			 "title": "Le secret du LCL Dulac"
 		 }]
     },
+    "garsdeleclerc": {
+        "videoPathPrefix": "../../js/utils/src/",
+        "posterPathPrefix": "../../js/utils/src/",
+        "videos": [		{
+			 "poster": "victoire.png",
+			 "src": "victoire.mp4",
+			 "title": "Victoire"
+		 },
+     {
+    "poster": "defaite.png",
+    "src": "defaite.mp4",
+    "title": "Défaite"
+  },
+		{
+			 "poster": "bloques2014.png",
+			 "src": "bloques2014.mp4",
+			 "title": "Bloqués - le JTX 2014"
+		 },
+		{
+			 "poster": "raidpresidentiel.png",
+			 "src": "raidpresidentiel.mp4",
+			 "title": "Raid présidentiel"
+		 }]
+    },
     "bonusincorpo2016": {
         "videoPathPrefix": "../../../07_Bonus/01_Incorpo_2016/",
         "posterPathPrefix": "../../images/posters/bonusincorpo2016/",
@@ -2781,7 +2805,7 @@ var videos = {
 		{
 			 "poster": "04_ulti2_mardi.png",
 			 "src": "04_ulti2_mardi.mp4",
-			 "title": "uclip ultimate 2"
+			 "title": "clip ultimate 2"
 		 },
 		{
 			 "poster": "05_ulti3_mardi.png",
@@ -2910,6 +2934,11 @@ var videos = {
 			 "poster": "l-Ecole_polytechnique_une_memoire_en_sursis.png",
 			 "src": "l-Ecole_polytechnique_une_memoire_en_sursis.mp4",
 			 "title": "l'Ecole polytechnique, une mémoire en sursis"
+		 },
+		{
+			 "poster": "chronoX2014.png",
+			 "src": "chronoX2014.mp4",
+			 "title": "Chrono X2014"
 		 },
 ]
     },
@@ -5218,6 +5247,50 @@ var videos = {
 			 "title": "Zapping"
 		 }]
     },
+    "tsged2017": {
+        "videoPathPrefix": "../../../02_Vie_de_promo/19_TSGED_2017/",
+        "posterPathPrefix": "../../images/posters/tsged2017/",
+        "videos": [		{
+			 "poster": "000a_intro.png",
+			 "src": "000a_intro.mp4",
+			 "title": "Intro"
+		 },
+		{
+			 "poster": "001a_Retro_CO_Cross_Equitation.png",
+			 "src": "001a_Retro_CO_Cross_Equitation.mp4",
+			 "title": "CO - Cross - Équitation"
+		 },
+		{
+			 "poster": "002a_retro natation.png",
+			 "src": "002a_retro natation.mp4",
+			 "title": "Natation"
+		 },
+		{
+			 "poster": "003a_Interview détournée.png",
+			 "src": "003a_Interview détournée.mp4",
+			 "title": "Interview détournée"
+		 },
+		{
+			 "poster": "004a_Retro sports de combat.png",
+			 "src": "004a_Retro sports de combat.mp4",
+			 "title": "Sports de combat"
+		 },
+		{
+			 "poster": "005a_FINALE.png",
+			 "src": "005a_FINALE.mp4",
+			 "title": "Caméra cachée"
+		 },
+		{
+			 "poster": "006a_Séquence 01.png",
+			 "src": "006a_Séquence 01.mp4",
+			 "title": "Volley - Hand - Basket"
+		 },
+		{
+			 "poster": "007a_Retro_foot_rugby.png",
+			 "src": "007a_Retro_foot_rugby.mp4",
+			 "title": "Foot - Rugby"
+		 }]
+    },
     "spectacles": {
         "videoPathPrefix": "../../../03_Evenements/01_Spectacles/",
         "posterPathPrefix": "../../images/posters/spectacles/",
@@ -5280,6 +5353,16 @@ var videos = {
 			 "poster": "2017-01-05_Cracheur_de_feu.png",
 			 "src": "2017-01-05_Cracheur_de_feu.mp4",
 			 "title": "Cracheur de feu"
+		 },
+		{
+			 "poster": "2017-03-01_Dance4U.png",
+			 "src": "2017-03-01_Dance4U.mp4",
+			 "title": "Dance 4U 2017"
+		 },
+		{
+			 "poster": "2017-03-02-l-Alouette.png",
+			 "src": "2017-03-02-l-Alouette.mp4",
+			 "title": "L'Alouette"
 		 }]
     },
 	"concerts": {
@@ -5346,6 +5429,16 @@ var videos = {
 			 "title": "Concours de piano - Pierre Watrin"
 		 },
 		{
+			 "poster": "2017-03-07_SLC_Alexis_Cardenas.png",
+			 "src": "2017-03-07_SLC_Alexis_Cardenas.mp4",
+			 "title": "SLC 2017 - Alexis Cardenas & Recovero"
+		 },
+		{
+			 "poster": "2017-03-07_Concert_Chorale_Eglise_Saint-Eustache.png",
+			 "src": "2017-03-07_Concert_Chorale_Eglise_Saint-Eustache.mp4",
+			 "title": "Chorale mars 2017 (Saint-Eustache)"
+		 },
+		{
 			 "poster": "FUPS_PCR_Somebody_Told_Me_Live.png",
 			 "src": "FUPS_PCR_Somebody_Told_Me_Live.mp4",
 			 "title": "FUPS - Pop Corn Redemption"
@@ -5408,6 +5501,11 @@ var videos = {
 			 "poster": "2016-12-12_Conference_interreligieuse.png",
 			 "src": "2016-12-12_Conference_interreligieuse.mp4",
 			 "title": "Violence et Religion"
+		 },
+		{
+			 "poster": "2017-03-15_Point_de_situation.png",
+			 "src": "2017-03-15_Point_de_situation.mp4",
+			 "title": "Point de situation mars 2017"
 		 }]
 	},
     "wei2014": {
@@ -5668,11 +5766,16 @@ var videos = {
 			 "title": "Festival d'automne 2016"
 		 },
 		{
+			 "poster": "DEZ.png",
+			 "src": "DEZ.mp4",
+			 "title": "DEZ"
+		 },
+		{
 			 "poster": "Ceremonies_des_X2014.png",
 			 "src": "Ceremonies_des_X2014.mp4",
 			 "title": "Cérémonies des X2014"
 		 }]
-    }, 
+    },
     "interviews": {
         "videoPathPrefix": "../../../04_Interviews/",
         "posterPathPrefix": "../../images/posters/interviews/",
@@ -5968,5 +6071,354 @@ var videos = {
 			 "src": "06_Victoire.mp4",
 			 "title": "victoire"
 		 }]
+    },
+    "amphidedepart": {
+        "videoPathPrefix": "../../../06_Amphi_de_Depart/",
+        "posterPathPrefix": "../../images/posters/amphidedepart/",
+        "videos": [{
+			 "poster": "01_IntroLED.png",
+			 "src": "01_IntroLED.mp4",
+			 "title": "Intro LED"
+		 },
+		{
+			 "poster": "02_DiscoursBiot.png",
+			 "src": "02_DiscoursBiot.mp4",
+			 "title": "Discours de Jacques Biot"
+		 },
+		{
+			 "poster": "03_DreamOfGrandeur.png",
+			 "src": "03_DreamOfGrandeur.mp4",
+			 "title": "A Dream of Grandeur"
+		 },
+		{
+			 "poster": "04_FR1-0.png",
+			 "src": "04_FR1-0.mp4",
+			 "title": "Acte I Scène 00 - Intro"
+		 },
+		{
+			 "poster": "05_DiscoursTourneur.png",
+			 "src": "05_DiscoursTourneur.mp4",
+			 "title": "Discours de Bernard Tourneur"
+		 },
+		{
+			 "poster": "06_FR1-1.png",
+			 "src": "06_FR1-1.mp4",
+			 "title": "Acte I Scène 01 - Premier rève"
+		 },
+		{
+			 "poster": "07_FR1-2.png",
+			 "src": "07_FR1-2.mp4",
+			 "title": "Acte I Scène 02 - Exposition"
+		 },
+		{
+			 "poster": "08_RetroDEZ.png",
+			 "src": "08_RetroDEZ.mp4",
+			 "title": "Rétro DEZ"
+		 },
+		{
+			 "poster": "09_Jennance.png",
+			 "src": "09_Jennance.mp4",
+			 "title": "La Jennance"
+		 },
+		{
+			 "poster": "10_GaspardEtBalthazar.png",
+			 "src": "10_GaspardEtBalthazar.mp4",
+			 "title": "Gaspard et Balthazar"
+		 },
+		{
+			 "poster": "11_DanseDeSalon.png",
+			 "src": "11_DanseDeSalon.mp4",
+			 "title": "Danse de Salon"
+		 },
+		{
+			 "poster": "12_LeCauchemar.png",
+			 "src": "12_LeCauchemar.mp4",
+			 "title": "Le Cauchemar"
+		 },
+		{
+			 "poster": "13_Impro.png",
+			 "src": "13_Impro.mp4",
+			 "title": "Impro"
+		 },
+  {
+     "poster": "14_TheLastVendredi.png",
+     "src": "14_TheLastVendredi.mp4",
+     "title": "The Last Vendredi"
+   },
+  {
+     "poster": "15_VioloncelleEnrage.png",
+     "src": "15_VioloncelleEnrage.mp4",
+     "title": "Violoncelle Enragé"
+   },
+  {
+     "poster": "16_X2014.png",
+     "src": "16_X2014.mp4",
+     "title": "X2014"
+   },
+  {
+     "poster": "17_TahaAyman.png",
+     "src": "17_TahaAyman.mp4",
+     "title": "Taha et Ayman"
+   },
+  {
+     "poster": "18_JustDance.png",
+     "src": "18_JustDance.mp4",
+     "title": "Just Dance"
+   },
+  {
+     "poster": "19_FR1-3.png",
+     "src": "19_FR1-3.mp4",
+     "title": "Acte I Scène 03 - Introspection"
+   },
+  {
+     "poster": "20_Colorblind.png",
+     "src": "20_Colorblind.mp4",
+     "title": "Colorblind"
+   },
+  {
+     "poster": "21_FR1-5.png",
+     "src": "21_FR1-5.mp4",
+     "title": "Acte I Scène 05 - Le premier Lucide"
+   },
+  {
+     "poster": "22_Chorale.png",
+     "src": "22_Chorale.mp4",
+     "title": "Cantique de Jean Racine"
+   },
+  {
+     "poster": "23_FR1-6.png",
+     "src": "23_FR1-6.mp4",
+     "title": "Acte I Scène 06 - T'as déconné"
+   },
+  {
+     "poster": "24_Trotinettes.png",
+     "src": "24_Trotinettes.mp4",
+     "title": "Trotinettes"
+   },
+  {
+     "poster": "25_FR1-7.png",
+     "src": "25_FR1-7.mp4",
+     "title": "Acte I Scène 07 - le lendemain"
+   },
+   {
+  "poster": "26_MadWorld.png",
+  "src": "26_MadWorld.mp4",
+  "title": "Mad World"
+  },
+  {
+  "poster": "27_DiscussionDeBE.png",
+  "src": "27_DiscussionDeBE.mp4",
+  "title": "Discussion de BE"
+  },
+  {
+  "poster": "28_Magie.png",
+  "src": "28_Magie.mp4",
+  "title": "Magie"
+  },
+  {
+  "poster": "29_FR1-8.png",
+  "src": "29_FR1-8.mp4",
+  "title": "Acte I Scène 08 - L'Invasion"
+  },
+  {
+  "poster": "30_Heartbeat.png",
+  "src": "30_Heartbeat.mp4",
+  "title": "Heartbeat"
+  },
+  {
+  "poster": "31_Cabaret.png",
+  "src": "31_Cabaret.mp4",
+  "title": "Cabaret"
+  },
+  {
+  "poster": "32_PimPimBoys.png",
+  "src": "32_PimPimBoys.mp4",
+  "title": "Pim Pim Boys"
+  },
+  {
+  "poster": "33_DiscoursDulac.png",
+  "src": "33_DiscoursDulac.mp4",
+  "title": "Discours d'Arnaud Dulac"
+  },
+  {
+  "poster": "34_FR2-1.png",
+  "src": "34_FR2-1.mp4",
+  "title": "Acte II Scène 01 - le Paria"
+  },
+  {
+  "poster": "35_ChansonBroadway.png",
+  "src": "35_ChansonBroadway.mp4",
+  "title": "Chanson Broadway"
+  },
+  {
+  "poster": "36_FR2-2.png",
+  "src": "36_FR2-2.mp4",
+  "title": "Acte II Scène 02 - Le Mentor"
+  },
+  {
+  "poster": "37_FR2-3.png",
+  "src": "37_FR2-3.mp4",
+  "title": "Acte II Scène 03 - Confrontation"
+  },
+  {
+  "poster": "38_Kes.png",
+  "src": "38_Kes.mp4",
+  "title": "Numéro Kès"
+  },
+  {
+  "poster": "39_Jazz.png",
+  "src": "39_Jazz.mp4",
+  "title": "Jazz"
+  },
+  {
+  "poster": "40_MicroTrottoir.png",
+  "src": "40_MicroTrottoir.mp4",
+  "title": "Micro Trottoir"
+  },
+  {
+  "poster": "41_Skyfall.png",
+  "src": "41_Skyfall.mp4",
+  "title": "Skyfall"
+  },
+  {
+  "poster": "42_Khomiss.png",
+  "src": "42_Khomiss.mp4",
+  "title": "Clip Khômiss"
+  },
+  {
+  "poster": "43_FR2-4.png",
+  "src": "43_FR2-4.mp4",
+  "title": "Acte II Scène 04 - Infiltration"
+  },
+  {
+  "poster": "44_FR2-5.png",
+  "src": "44_FR2-5.mp4",
+  "title": "Acte II Scène 05 - Lucide tout-puissant"
+  },
+  {
+  "poster": "45_TangoDeMassyPalaiseau.png",
+  "src": "45_TangoDeMassyPalaiseau.mp4",
+  "title": "Tango de Massy-Palaiseau"
+  },
+  {
+  "poster": "46_ChansonDesEV.png",
+  "src": "46_ChansonDesEV.mp4",
+  "title": "Chanson des EVs"
+  },
+  {
+  "poster": "47_FR2-6.png",
+  "src": "47_FR2-6.mp4",
+  "title": "Acte II Scène 06 - Descente des rêves"
+  },
+  {
+  "poster": "48_Badaboom.png",
+  "src": "48_Badaboom.mp4",
+  "title": "Badaboom"
+  },
+  {
+  "poster": "49_FR2-7.png",
+  "src": "49_FR2-7.mp4",
+  "title": "Acte II Scène 07 - Le niveau fondamental"
+  },
+  {
+  "poster": "50_Termine.png",
+  "src": "50_Termine.mp4",
+  "title": "Terminé"
+  },
+  {
+  "poster": "51_Shalom.png",
+  "src": "51_Shalom.mp4",
+  "title": "Binet Shalom"
+  },
+  {
+  "poster": "52_PeintureLive.png",
+  "src": "52_PeintureLive.mp4",
+  "title": "Peinture Live"
+  },
+  {
+  "poster": "53_FR2-8.png",
+  "src": "53_FR2-8.mp4",
+  "title": "Acte II Scène 08 - Sacrifice"
+  },
+  {
+  "poster": "54_BDLR.png",
+  "src": "54_BDLR.mp4",
+  "title": "Clip BDLR"
+  },
+  {
+  "poster": "42_Khomiss.png",
+  "src": "42_Khomiss.mp4",
+  "title": "Clip Khômiss"
+  },
+  {
+  "poster": "43_FR2-4.png",
+  "src": "43_FR2-4.mp4",
+  "title": "Acte II Scène 04 - Infiltration"
+  },
+  {
+  "poster": "44_FR2-5.png",
+  "src": "44_FR2-5.mp4",
+  "title": "Acte II Scène 05 - Lucide tout-puissant"
+  },
+  {
+  "poster": "55_FR2-9.png",
+  "src": "55_FR2-9.mp4",
+  "title": "Acte II Scène 09 - Tête-à-tête"
+  },
+  {
+  "poster": "56_CeQuiRestera.png",
+  "src": "56_CeQuiRestera.mp4",
+  "title": "Ce qui restera"
+  },
+  {
+  "poster": "57_MedleyMusiqueDeFilms.png",
+  "src": "57_MedleyMusiqueDeFilms.mp4",
+  "title": "Medley musiques de films"
+  },
+  {
+  "poster": "58_FR2-10.png",
+  "src": "58_FR2-10.mp4",
+  "title": "Acte II Scène 10 - Retour à la réalité"
+  },
+  {
+  "poster": "59_FR2-11.png",
+  "src": "59_FR2-11.mp4",
+  "title": "Acte II Scène 11 - le nouveau rêve"
+  },
+  {
+  "poster": "60_Adieu2015.png",
+  "src": "60_Adieu2015.mp4",
+  "title": "Adieux des 2015"
+  },
+  {
+  "poster": "61_MedleyPromo.png",
+  "src": "61_MedleyPromo.mp4",
+  "title": "Medley promo"
+  },
+  {
+  "poster": "62_Retro.png",
+  "src": "62_Retro.mp4",
+  "title": "Rétro globale"
+  },
+  {
+  "poster": "63_Lipdub.png",
+  "src": "63_Lipdub.mp4",
+  "title": "Lipdub"
+  },
+  {
+  "poster": "64_ChansonDeDepart.png",
+  "src": "64_ChansonDeDepart.mp4",
+  "title": "Chanson de départ"
+  },
+  {
+  "poster": "65_Trombino.png",
+  "src": "65_Trombino.mp4",
+  "title": "Trombino"
+  },
+  {
+  "poster": "66_MedleyBonus.png",
+  "src": "66_MedleyBonus.mp4",
+  "title": "Medley Bonus"
+  }]
     }
 }
